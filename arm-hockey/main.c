@@ -1,7 +1,10 @@
-extern void hockey(void);
+extern void arm_hockey(void);
 
-
-int main()
+/**
+ * main.c
+ */
+int main(void)
 {
-    hockey();
+    arm_hockey();
+	return 0;
 }

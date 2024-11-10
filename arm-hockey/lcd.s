@@ -47,6 +47,7 @@
 
 	.text
 
+    .global         delay_us
 	.global        lcd_output_string
 	.global 	   lcd_init
 	.global        lcd_cmd
@@ -365,19 +366,6 @@ latch_lcd:
 
 
 
-; r0 holds amount to delay for in microseconds
-; Note: this is an approx. calculation
-delay_us:
-	push 	{r1}
-	mov		r1, #0
-
-delay_us_Loop:
-	add		r1, #1
-	cmp		r0, r1
-	bgt		delay_us_Loop
-
-	pop		{r1}
-	mov		pc, lr
 
 
 
