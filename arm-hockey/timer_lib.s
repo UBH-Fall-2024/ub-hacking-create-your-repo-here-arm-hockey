@@ -1,8 +1,10 @@
 	.data
 	.text
-	.global gpio_init
 
-gpio_init:
+	.global timer_init
+
+
+timer_init:
 	push {lr}
 
 	pop {lr}
